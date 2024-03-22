@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@path: "./includes";
+
+@import (css) "@{path}/reset.css";
+@import "@{path}/globals.less";
+@import "@{path}/header.less";
+
+main
+{
+
+    div, div div
+    {
+        display: flex;
+    }
+
+    div
+    {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    div div
+    {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    a
+    {
+        background: #48374D;
+        border: medium solid #181220;
+        border-radius: 40px;
+
+        color: white;
+
+        letter-spacing: 3px;
+
+        margin: 30px;
+        padding: 15px 30px;
+
+        transition: padding .8s;
+
+        &:hover
+        {
+            background: #AB8476;
+            padding: 25px 40px;
+        }
+    }
+}
+
+@import "@{path}/footer.less";

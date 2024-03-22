@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import "./includes/reset.css";
+@import "./includes/globals.css";
+@import "./includes/header.css";
+@import "./includes/footer.css";
+
+object
+{
+    box-shadow: 2px 2px 20px 7px #181220;
+
+    height: 1000px;
+    width: 800px;
+}
+
+section > div
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    margin: 4%;
+}
+
+section > div > div
+{
+    margin: 2%;
+}

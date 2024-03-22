@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@path: "./includes";
+
+@import (css) "@{path}/reset.css";
+@import "@{path}/globals.less";
+@import "@{path}/header.less";
+
+object
+{
+    box-shadow: 2px 2px 20px 7px #181220;
+
+    height: 1000px;
+    width: 800px;
+}
+
+section
+{
+
+    & > div
+    {
+        margin: 4%;
+
+        & > div
+        {
+            margin: 2%;
+        }
+    }
+}
+
+@import "@{path}/footer.less";

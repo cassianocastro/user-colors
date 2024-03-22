@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@path: "./includes";
+
+@import (css) "@{path}/reset.css";
+@import "@{path}/globals.less";
+@import "@{path}/header.less";
+
+section > div
+{
+    justify-content: space-evenly;
+    min-height: 500px;
+}
+
+p
+{
+    color: #48374D;
+
+    font-weight: bold italic 50px sans-serif;
+
+    text-shadow: 2px 2px 1px #181220;
+}
+
+@import "@{path}/footer.less";

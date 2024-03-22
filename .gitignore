@@ -1,0 +1,9 @@
+/vendor
+
+CHANGELOG.md
+README.md
+.contact.yml
+
+*.pdf
+*.sqlite
+*.zip

@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "vscode-icons-team.vscode-icons",
+        "EditorConfig.EditorConfig",
+        "bmewburn.vscode-intelephense-client",
+        "HookyQR.beautify",
+        "whatwedo.twig",
+        "redhat.vscode-yaml"
+    ]
+}

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+header > div
+{
+    background: #48374D;
+    box-shadow: 0 1px 10px 7px #181220;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 80px;
+    width: 100%;
+}
+
+header > div > div
+{
+    margin: 3%;
+    padding: 5px;
+}
+
+header  nav  div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 300px;
+}
+
+header a
+{
+    border-radius: 3px;
+
+    color: white;
+    cursor: pointer;
+
+    font-size: large;
+
+    letter-spacing: 2px;
+
+    padding: 10px 15px;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color .7s;
+}
+
+header a:hover
+{
+    background: #181220;
+
+    outline: 2px inset #C0A297;
+}
+
+#special
+{
+    background: #181220;
+    border-radius: 20px;
+
+    outline-offset: 3px;
+    outline-width: 3px;
+}
+
+#special:hover
+{
+    background: #48374D;
+
+    outline-color: #181220;
+}

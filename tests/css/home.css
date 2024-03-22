@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import "./includes/reset.css";
+@import "./includes/globals.css";
+@import "./includes/header.css";
+@import "./includes/footer.css";
+
+main > div
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+}
+
+main > div div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main a
+{
+    background: #48374D;
+    border: medium solid #181220;
+    border-radius: 40px;
+
+    color: white;
+    cursor: pointer;
+
+    letter-spacing: 3px;
+
+    margin: 30px;
+    padding: 15px 30px;
+
+    text-decoration: none;
+    text-align: center;
+
+    transition: padding .8s;
+}
+
+main a:hover
+{
+    background: #AB8476;
+
+    padding: 25px 40px;
+}
