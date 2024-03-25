@@ -23,7 +23,7 @@ final class ColorsController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument(__DIR__ . "/../../public/templates/colors.php")
+            new HtmlDocument("colors.php")
         );
     }
 

@@ -22,7 +22,7 @@ final class UsersController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument(__DIR__ . "/../../public/templates/users.php")
+            new HtmlDocument("users.php")
         );
     }
 

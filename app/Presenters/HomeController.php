@@ -17,7 +17,7 @@ final class HomeController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument(__DIR__ . "/../../public/templates/index.php")
+            new HtmlDocument("index.php")
         );
     }
 }
