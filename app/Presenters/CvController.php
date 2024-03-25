@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Presenters;
 
-use App\Model\Utils\{ Body, HtmlDocument, Response };
+use App\Model\Utils\{ HtmlDocument, Response };
 
 /**
  *

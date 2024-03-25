@@ -5,7 +5,7 @@ namespace App\Presenters;
 
 use App\Model\Entities\{ User, Color };
 use App\Model\Tables\{ UsersTable, ColorsTable, UserPaletteTable };
-use App\Model\Utils\{ Body, HtmlDocument, Request, Response, HTMLFormatter, Palette };
+use App\Model\Utils\{ HtmlDocument, Request, Response, HTMLFormatter, Palette };
 use src\view\{ UsersView, UsersFormView };
 
 /**
