@@ -9,18 +9,18 @@ namespace App\Model\Utils;
 final class Response
 {
 
-    private Headers $headers;
+    private array $headers;
     private Body $body;
 
-    public function __construct(Headers $headers, Body $body)
+    public function __construct(array $headers, Body $body)
     {
         $this->headers = $headers;
         $this->body    = $body;
     }
 
-    public function setHeader(Headers $headers): void
+    public function setHeader(string $header): void
     {
-        $this->headers = $headers;
+        $this->headers[] = $header;
     }
 
     public function getBody(): Body
