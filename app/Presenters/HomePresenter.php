@@ -8,7 +8,7 @@ use App\Model\Utils\{ HtmlDocument, Response };
 /**
  *
  */
-final class HomeController
+final class HomePresenter
 {
 
     public function index(): Response
