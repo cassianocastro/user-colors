@@ -6,7 +6,7 @@ namespace App\Model\Utils;
 /**
  *
  */
-final class HtmlDocument implements IDocument
+final class HtmlDocument
 {
 
     private QSCreator $qs;
@@ -16,12 +16,7 @@ final class HtmlDocument implements IDocument
     public function __construct(string $path)
     {
         $this->path = $path;
-        $this->qs = new QSCreator();
-    }
-
-    public function getName(): string
-    {
-        return $this->qs;
+        $this->qs   = new QSCreator();
     }
 
     public function getPath(): string
