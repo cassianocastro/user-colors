@@ -28,25 +28,26 @@ final class ColorsFormView extends View
         return <<<HTML
             <form action="{$this->qs->create("colors", "insert")}" method="POST" spellcheck="true" autocomplete="off">
                 <div>
-                    <div>
-                        <fieldset>
-                            <legend>New Color</legend>
-                            <div>
-                                <label id="label_name">Color Name:</label>
-                                <input id="name" type="text" name="name" autofocus maxlength="100" pattern="([A-Za-z])+" title="Somente caracteres de A-Z e/ou a-z" placeholder="Informe o nome..." required>
-                                <label id="label_hex">Tonalidade:</label>
-                                <input id="hexCode" type="color" name="hexCode" required>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div>
-                        <menu>
-                            <div>
-                                <li><button type="reset">Limpar</button></li>
-                                <li><button type="submit">Enviar</button></li>
-                            </div>
-                        </menu>
-                    </div>
+                    <fieldset>
+                        <legend>New Color</legend>
+
+                        <label>
+                            Color Name:
+
+                            <input type="text" name="name" maxlength="100" pattern="([A-Za-z])+" title="Somente caracteres de A-Z e/ou a-z" placeholder="Informe o nome..." autofocus required>
+                        </label>
+
+                        <label>
+                            Tonalidade:
+
+                            <input type="color" name="hexCode" required>
+                        </label>
+                    </fieldset>
+
+                    <menu>
+                        <li><button type="reset">Limpar</button></li>
+                        <li><button type="submit">Enviar</button></li>
+                    </menu>
                 </div>
             </form>
         HTML;
@@ -57,26 +58,28 @@ final class ColorsFormView extends View
         return <<<HTML
             <form action="{$this->qs->create("colors", "update")}" method="POST" spellcheck="true" autocomplete="off">
                 <div>
-                    <div>
-                        <fieldset>
-                            <legend>Update Color</legend>
-                            <div>
-                                <input type="hidden" name="id" value="{$this->color->getID()}">
-                                <label>Color Name:</label>
-                                <input type="text" name="name" value="{$this->color->getName()}" autofocus maxlength="100" pattern="([A-Za-z])+" title="Somente caracteres de A-Z e/ou a-z" placeholder="Informe o nome..." required>
-                                <label>Tonalidade:</label>
-                                <input type="color" name="hexCode" value="{$this->color->getHexCode()}" required>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div>
-                        <menu>
-                            <div>
-                                <li><button type="reset">Limpar</button></li>
-                                <li><button type="submit">Enviar</button></li>
-                            </div>
-                        </menu>
-                    </div>
+                    <fieldset>
+                        <legend>Update Color</legend>
+
+                        <input type="hidden" name="id" value="{$this->color->getID()}">
+
+                        <label>
+                            Color Name:
+
+                            <input type="text" name="name" value="{$this->color->getName()}" maxlength="100" pattern="([A-Za-z])+" title="Somente caracteres de A-Z e/ou a-z" placeholder="Informe o nome..." autofocus required>
+                        </label>
+
+                        <label>
+                            Tonalidade:
+
+                            <input type="color" name="hexCode" value="{$this->color->getHexCode()}" required>
+                        </label>
+                    </fieldset>
+
+                    <menu>
+                        <li><button type="reset">Limpar</button></li>
+                        <li><button type="submit">Enviar</button></li>
+                    </menu>
                 </div>
             </form>
         HTML;
