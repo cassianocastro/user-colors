@@ -9,7 +9,7 @@ use App\View\View;
 /**
  *
  */
-final class CvController implements IController
+final class CvController
 {
 
     public function index(): Response

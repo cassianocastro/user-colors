@@ -11,7 +11,7 @@ use App\View\{ ColorsView, ColorsFormView };
 /**
  *
  */
-final class ColorsController implements IEntityController
+final class ColorsController
 {
 
     public function index(): Response

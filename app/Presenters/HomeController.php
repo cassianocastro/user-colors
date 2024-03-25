@@ -1,19 +1,25 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Presenters;
 
-use App\Model\Utils\Response;
-use App\View\HomeView;
+use App\Model\Utils\{ Body, Headers, HtmlDocument, Response };
 
 /**
  *
  */
-final class HomeController implements IController
+final class HomeController
 {
 
     public function index(): Response
     {
-        // Browser::render(new HomeView());
+        return new Response(
+            new Headers(),
+            new Body(
+                new HtmlDocument(
+                    __DIR__ . "/../../public/templates/index.php"
+                )
+            )
+        );
     }
 }

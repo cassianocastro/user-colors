@@ -11,7 +11,7 @@ use src\view\{ UsersView, UsersFormView };
 /**
  *
  */
-final class UsersController implements IEntityController
+final class UsersController
 {
 
     public function index(): Response
