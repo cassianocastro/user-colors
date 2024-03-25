@@ -11,6 +11,6 @@ final class Browser
 
     static public function render(Response $response): void
     {
-        print $response->getContent()->__toString();
+        print $response->getBody()->__toString();
     }
 }
