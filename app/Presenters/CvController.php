@@ -17,9 +17,7 @@ final class CvController
             [
                 "Content-Type: text/html"
             ],
-            new Body(
-                new HtmlDocument(__DIR__ . "/../../public/templates/cv.php")
-            )
+            new HtmlDocument(__DIR__ . "/../../public/templates/cv.php")
         );
     }
 }
