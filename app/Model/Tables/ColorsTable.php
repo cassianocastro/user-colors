@@ -4,17 +4,20 @@ declare(strict_types=1);
 namespace App\Model\Tables;
 
 use PDO;
-use src\model\entities\Color;
+use App\Model\Dao\PDOSingleton as Connection;
+use App\Model\Entities\Color;
 
 /**
  *
  */
-final class ColorsTable extends Table
+final class ColorsTable
 {
+
+    protected PDO $connection;
 
     public function __construct()
     {
-        parent::__construct();
+        $this->connection = Connection::getInstance();
     }
 
     public function insert(Color $color): void
