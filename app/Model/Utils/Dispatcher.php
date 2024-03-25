@@ -15,7 +15,15 @@ final class Dispatcher
         $action     = $request->getAction();
 
         $className  = ucfirst($controller);
-        $controller = "App\\Presenters\\{$className}Controller";
+
+        if ( $className === "Home" )
+        {
+            $controller = "App\\Presenters\\{$className}Presenter";
+        }
+        else
+        {
+            $controller = "App\\Presenters\\{$className}Controller";
+        }
 
         if ( class_exists($controller) and method_exists($controller, $action) )
         {
