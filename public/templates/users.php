@@ -1,3 +1,5 @@
+<?php $users = [] ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
@@ -39,7 +41,7 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($this->users as $user): ?>
+              <?php foreach ($users as $user): ?>
                 <tr>
                   <td><?= $user->getID() ?></td>
                   <td><?= $user->getName() ?></td>
