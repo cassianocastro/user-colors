@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Presenters;
 
 use App\Model\Entities\{ User, Color };
 use App\Model\tables\{ UsersTable, ColorsTable, UserPaletteTable };
