@@ -15,16 +15,13 @@ final class Dispatcher
         $action     = $request->getAction();
 
         $className  = ucfirst($controller);
-        $controller = "src\\controllers\\{$className}Controller";
+        $controller = "App\\Presenters\\{$className}Controller";
 
         if ( class_exists($controller) and method_exists($controller, $action) )
         {
             $response = call_user_func([new $controller(), $action], $request);
 
-            if ( is_string($response) )
-            {
-                Browser::render($response);
-            }
+            Browser::render($response);
         }
     }
 }
