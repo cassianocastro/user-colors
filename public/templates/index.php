@@ -10,7 +10,7 @@
 
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
 
-  <link rel="stylesheet/less" type="text/css" href="src/public/less/home.less">
+  <link rel="stylesheet/less" type="text/css" href="public/styles/less/home.less">
 
   <title>Test | Home</title>
 </head>
