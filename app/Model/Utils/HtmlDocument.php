@@ -9,20 +9,19 @@ namespace App\Model\Utils;
 final class HtmlDocument implements IDocument
 {
 
-    private string $name;
+    private QSCreator $qs;
     private string $path;
     private string $content;
 
-    public function __construct(string $name, string $path, string $content)
+    public function __construct(string $path)
     {
-        $this->name    = $name;
-        $this->path    = $path;
-        $this->content = $content;
+        $this->path = $path;
+        $this->qs = new QSCreator();
     }
 
     public function getName(): string
     {
-        return $this->name;
+        return $this->qs;
     }
 
     public function getPath(): string
@@ -32,6 +31,13 @@ final class HtmlDocument implements IDocument
 
     public function getContent(): string
     {
+        ob_start();
+
+        require_once $this->path;
+
+        $this->content = ob_get_contents();
+        ob_end_clean();
+
         return $this->content;
     }
 }
