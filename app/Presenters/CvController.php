@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Presenters;
 
-use App\Model\Utils\Response;
-use App\View\View;
+use App\Model\Utils\{ Body, Headers, HtmlDocument, Response };
 
 /**
  *
@@ -14,11 +13,11 @@ final class CvController
 
     public function index(): Response
     {
-        Browser::render(
-            new class extends View
-            {
-                protected const TEMPLATE = "cv.php";
-            }
+        return new Response(
+            new Headers(),
+            new Body(
+                new HtmlDocument(__DIR__ . "/../../public/templates/cv.php")
+            )
         );
     }
 }
