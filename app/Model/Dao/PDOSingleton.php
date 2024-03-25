@@ -22,7 +22,7 @@ final class PDOSingleton
         {
 
             $filePath = (new PathReader())->read(
-                __DIR__ . "/../../lib/database/db.sqlite"
+                __DIR__ . "/../../../lib/database/db.sqlite"
             );
 
             try
