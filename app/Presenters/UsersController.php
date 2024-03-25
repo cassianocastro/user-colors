@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Presenters;
 
 use App\Model\Entities\{ User, Color };
-use App\Model\tables\{ UsersTable, ColorsTable, UserPaletteTable };
+use App\Model\Tables\{ UsersTable, ColorsTable, UserPaletteTable };
 use App\Model\Utils\{Body, Headers, HtmlDocument, Request, Response, HTMLFormatter, Palette };
 use src\view\{ UsersView, UsersFormView };
 
