@@ -5,7 +5,7 @@ namespace App\Presenters;
 
 use App\Model\Entities\Color;
 use App\Model\Tables\ColorsTable;
-use App\Model\Utils\{ Body, Headers, HtmlDocument, Request, Response, HTMLFormatter, Palette };
+use App\Model\Utils\{ Body, HtmlDocument, Request, Response, HTMLFormatter, Palette };
 use App\View\{ ColorsView, ColorsFormView };
 
 /**
@@ -20,7 +20,9 @@ final class ColorsController
         $view   = new ColorsView($colors);
 
         return new Response(
-            new Headers(),
+            [
+                "Content-Type: text/html"
+            ],
             new Body(
                 new HtmlDocument(__DIR__ . "/../../public/templates/colors.php")
             )
