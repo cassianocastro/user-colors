@@ -1,3 +1,5 @@
+<?php $colors = [] ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
@@ -7,7 +9,7 @@
 
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
 
-  <link rel="stylesheet/less" type="text/css" href="src/public/less/table.less">
+  <link rel="stylesheet/less" type="text/css" href="public/styles/less/table.less">
 
   <title>Test | Colors</title>
 </head>
@@ -40,7 +42,7 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($this->colors as $color) : ?>
+              <?php foreach ($colors as $color) : ?>
                 <tr>
                   <td><?= $color->getID() ?></td>
                   <td><?= $color->getName() ?></td>
