@@ -4,17 +4,20 @@ declare(strict_types=1);
 namespace App\Model\Tables;
 
 use PDO;
+use App\Model\Dao\PDOSingleton as Connection;
 use App\Model\Entities\User;
 
 /**
  *
  */
-final class UsersTable extends Table
+final class UsersTable
 {
+
+    protected PDO $connection;
 
     public function __construct()
     {
-        parent::__construct();
+        $this->connection = Connection::getInstance();
     }
 
     public function insert(User $user): void
