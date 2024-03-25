@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Presenters;
 
 use App\Model\Entities\Color;
 use App\Model\Tables\ColorsTable;
-use App\Model\Utils\{ Request, Response };
+use App\Model\Utils\{ Body, Headers, HtmlDocument, Request, Response, HTMLFormatter, Palette };
 use App\View\{ ColorsView, ColorsFormView };
 
 /**
@@ -19,7 +19,12 @@ final class ColorsController
         $colors = (new ColorsTable())->getAll();
         $view   = new ColorsView($colors);
 
-        // Browser::render($view);
+        return new Response(
+            new Headers(),
+            new Body(
+                new HtmlDocument(__DIR__ . "/../../public/templates/colors.php")
+            )
+        );
     }
 
     public function showForm(Request $request): Response
