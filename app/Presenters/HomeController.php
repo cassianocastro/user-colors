@@ -16,9 +16,7 @@ final class HomeController
         return new Response(
             new Headers(),
             new Body(
-                new HtmlDocument(
-                    __DIR__ . "/../../public/templates/index.php"
-                )
+                new HtmlDocument(__DIR__ . "/../../public/templates/index.php")
             )
         );
     }
