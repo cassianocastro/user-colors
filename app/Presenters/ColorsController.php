@@ -23,7 +23,7 @@ final class ColorsController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument("colors.php")
+            new HtmlDocument("colors/index.php")
         );
     }
 

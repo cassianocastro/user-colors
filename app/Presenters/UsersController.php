@@ -22,7 +22,7 @@ final class UsersController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument("users.php")
+            new HtmlDocument("users/index.php")
         );
     }
 
