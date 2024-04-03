@@ -9,21 +9,21 @@
 main
 {
 
-    div
+    & > :only-child
     {
         align-items: center;
         display: flex;
-        flex-direction: column;
+        flex-flow: column nowrap;
         justify-content: center;
     }
 
-    ul
+    & ul
     {
         display: flex;
-        justify-content: space-evenly;
+        gap: 30px;
     }
 
-    a
+    & a
     {
         background: #48374D;
         border: medium solid #181220;
@@ -33,10 +33,9 @@ main
 
         letter-spacing: 3px;
 
-        margin: 30px;
         padding: 15px 30px;
 
-        transition: padding .8s;
+        transition: padding .3s linear;
 
         &:hover
         {
