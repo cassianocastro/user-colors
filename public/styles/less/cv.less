@@ -5,24 +5,17 @@
 @import "./includes/header.less";
 @import "./includes/footer.less";
 
-object
+section > :only-child
 {
-    box-shadow: 2px 2px 20px 7px #181220;
+    padding: 4%;
 
-    height: 1000px;
-    width: 800px;
-}
-
-section
-{
-
-    & > div
+    object
     {
-        margin: 4%;
+        box-shadow: 0 0 10px 2px #181220;
 
-        & > div
-        {
-            margin: 2%;
-        }
+        margin: 0 auto;
+
+        height: 1000px;
+        width: 800px;
     }
 }
