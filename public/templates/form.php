@@ -7,7 +7,7 @@
 
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
 
-  <link rel="stylesheet/less" type="text/css" href="src/public/less/form.less">
+  <link rel="stylesheet/less" type="text/css" href="public/styles/form.less">
 
   <title>Test | Form</title>
 </head>

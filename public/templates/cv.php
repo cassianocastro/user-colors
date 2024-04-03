@@ -8,7 +8,7 @@
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
   <link rel="preload" as="object" type="application/pdf" href="lib/Curriculum.pdf">
 
-  <link rel="stylesheet/less" type="text/css" href="public/styles/less/cv.less">
+  <link rel="stylesheet/less" type="text/css" href="public/styles/cv.less">
 
   <title>Test | CV</title>
 </head>

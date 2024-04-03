@@ -9,7 +9,7 @@
 
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
 
-  <link rel="stylesheet/less" type="text/css" href="public/styles/less/table.less">
+  <link rel="stylesheet/less" type="text/css" href="public/styles/table.less">
 
   <title>Test | Users</title>
 </head>
