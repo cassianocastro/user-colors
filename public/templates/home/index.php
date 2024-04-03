@@ -10,14 +10,14 @@
 
   <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
 
-  <link rel="stylesheet/less" type="text/css" href="public/styles/index.less">
+  <link rel="stylesheet/less" type="text/css" href="public/templates/home/index.less">
 
   <title>Test | Home</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/includes/noscript.inc'; ?>
+  <?php require_once __DIR__ . '/../includes/noscript.inc'; ?>
 
-  <?php require_once __DIR__ . '/includes/header.inc'; ?>
+  <?php require_once __DIR__ . '/../includes/header.inc'; ?>
 
   <main>
     <div>
@@ -32,7 +32,7 @@
     </div>
   </main>
 
-  <?php require_once __DIR__ . '/includes/footer.inc'; ?>
+  <?php require_once __DIR__ . '/../includes/footer.inc'; ?>
 
   <script defer type="module" src="https://cdn.jsdelivr.net/npm/less@4"></script>
 </body>
