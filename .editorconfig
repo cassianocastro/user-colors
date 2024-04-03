@@ -12,10 +12,10 @@ indent_size = 4
 [*.{yml,html}]
 indent_size = 2
 
-[src/public/templates/**.php]
+[public/templates/**.php]
 indent_size = 2
 
-[src/public/templates/includes/**.inc]
+[public/templates/includes/**.inc]
 indent_size = 2
 
 [tests/html/**.php]
