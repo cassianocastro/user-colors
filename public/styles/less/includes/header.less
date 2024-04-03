@@ -1,39 +1,41 @@
 @charset "UTF-8";
 
-.display
-{
-    display: flex;
-    flex-direction: row;
-}
-
 header
 {
+    height: 15vh;
 
-    & > div:extend(.display)
+    & > :only-child
     {
         background: #48374D;
         box-shadow: 0 1px 10px 7px #181220;
 
         align-items: center;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
 
-        height: 15vh;
-        width: 100%;
+        padding: 5px 10px;
 
-        & > div
+        height: 100%;
+        width: 100%;
+    }
+
+    & nav
+    {
+        & > :only-child
         {
-            margin: 3%;
-            padding: 5px;
+            width: 300px;
+        }
+
+        & ul
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
     }
 
-    nav div:extend(.display)
-    {
-        justify-content: space-evenly;
-        width: 300px;
-    }
-
-    a
+    & a
     {
         border-radius: 3px;
 
@@ -61,12 +63,12 @@ header
     background: #181220;
     border-radius: 20px;
 
+    outline: medium solid transparent;
     outline-offset: 3px;
-    outline-width: 3px;
 
     &:hover
     {
-        background: #48374D;
+        background: transparent;
         outline-color: #181220;
     }
 }
