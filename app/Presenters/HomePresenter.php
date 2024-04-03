@@ -17,7 +17,7 @@ final class HomePresenter
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument("index.php")
+            new HtmlDocument("home/index.php")
         );
     }
 }
