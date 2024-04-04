@@ -6,6 +6,38 @@
 @import "../.includes/header/index.less";
 @import "../.includes/footer/index.less";
 
+section
+{
+    height: 100%;
+    width: 40%;
+
+    & > :only-child
+    {
+        outline: thin solid brown;
+        padding: 20px;
+
+        height: 100%;
+    }
+
+    footer a
+    {
+        background: #684756;
+        border: medium solid #181220;
+        border-radius: 10px;
+
+        color: #DCCAC4;
+
+        margin: 20px auto;
+        padding: 20px;
+
+        &:hover
+        {
+            background: #181220;
+            border: medium solid #684756;
+        }
+    }
+}
+
 table
 {
     background-image: linear-gradient(#684756, #3D314A, #2C2337, #231C2D);
@@ -16,13 +48,23 @@ table
 
     table-layout: fixed;
 
-    width: 90%;
-
     a
     {
         color: #DCCAC4;
         margin: 5px;
     }
+}
+
+caption
+{
+    caption-side: bottom;
+    color: #2C2337;
+
+    font-style: italic;
+
+    padding: 5px;
+
+    text-align: left;
 }
 
 th
@@ -64,48 +106,4 @@ th, td
 tbody tr:nth-child(odd)
 {
     background: #181220;
-}
-
-caption
-{
-    caption-side: bottom;
-    color: #2C2337;
-
-    font-style: italic;
-
-    padding: 5px;
-
-    text-align: left;
-}
-
-section > div
-{
-    margin: 40px auto;
-
-    & > a
-    {
-        background: #684756;
-        border: medium solid #181220;
-        border-radius: 10px;
-
-        color: #DCCAC4;
-
-        margin: 20px auto;
-        padding: 20px;
-
-        &:hover
-        {
-            background: #181220;
-            border: medium solid #684756;
-        }
-    }
-}
-
-div > div
-{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    margin: 20px;
 }
