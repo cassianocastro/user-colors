@@ -1,3 +1,5 @@
+<?php [ $users, $colors ] = [ [], [] ]; ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
@@ -21,15 +23,6 @@
 
   <main>
     <div>
-      <nav>
-        <div>
-          <ul>
-            <li><a href="<?= $this->qs->create("users") ?>">Users</a></li>
-            <li><a href="<?= $this->qs->create("colors") ?>">Colors</a></li>
-          </ul>
-        </div>
-      </nav>
-
       <?php require_once __DIR__ . '/.includes/users/index.php'; ?>
 
       <?php require_once __DIR__ . '/.includes/colors/index.php'; ?>
