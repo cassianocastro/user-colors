@@ -13,6 +13,8 @@ final class HomePresenter
 
     public function index(): Response
     {
+        [ $users, $colors ] = [ [], [] ];
+
         return new Response(
             [
                 "Content-Type: text/html"
