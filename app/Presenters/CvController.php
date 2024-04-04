@@ -17,7 +17,7 @@ final class CvController
             [
                 "Content-Type: text/html"
             ],
-            new HtmlDocument("cv.php")
+            new HtmlDocument("cv/index.php")
         );
     }
 }
