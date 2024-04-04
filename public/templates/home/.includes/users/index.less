@@ -3,17 +3,22 @@
 section
 {
     height: 100%;
-    width: 40%;
 
     & > :only-child
     {
-        outline: thin solid brown;
         padding: 20px;
 
         height: 100%;
     }
 
-    footer a
+    header > :only-child
+    {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header a
     {
         background: #684756;
         border: medium solid #181220;
@@ -21,7 +26,6 @@ section
 
         color: #DCCAC4;
 
-        margin: 20px auto;
         padding: 20px;
 
         &:hover
@@ -45,20 +49,19 @@ table
     a
     {
         color: #DCCAC4;
-        margin: 5px;
     }
 }
 
 caption
 {
-    caption-side: bottom;
+    caption-side: top;
     color: #2C2337;
 
     font-style: italic;
 
     padding: 5px;
 
-    text-align: left;
+    text-align: center;
 }
 
 th
@@ -71,30 +74,25 @@ th
 
     &:nth-child(1)
     {
-        width: 20%;
+        width: 50%;
     }
 
     &:nth-child(2)
     {
-        width: 30%;
-    }
-
-    &:nth-child(3)
-    {
-        width: 30%;
+        width: 50%;
     }
 }
 
 th, caption
 {
     font-weight: bold;
-    font-size: large;
+    font-size: medium;
 }
 
 th, td
 {
     text-align: center;
-    padding: 10px;
+    padding: 7px;
 }
 
 tbody tr:nth-child(odd)
