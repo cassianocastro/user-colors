@@ -14,19 +14,6 @@ use App\View\{ ColorsView, ColorsFormView };
 final class ColorsController
 {
 
-    public function index(): Response
-    {
-        $colors = (new ColorsTable())->getAll();
-        $view   = new ColorsView($colors);
-
-        return new Response(
-            [
-                "Content-Type: text/html"
-            ],
-            new HtmlDocument("colors/index.php")
-        );
-    }
-
     public function showForm(Request $request): Response
     {
         $data = $request->getData("GET");

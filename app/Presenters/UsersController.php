@@ -14,18 +14,6 @@ use src\view\{ UsersView, UsersFormView };
 final class UsersController
 {
 
-    public function index(): Response
-    {
-        $users = (new UsersTable())->getAll();
-
-        return new Response(
-            [
-                "Content-Type: text/html"
-            ],
-            new HtmlDocument("users/index.php")
-        );
-    }
-
     public function showForm(Request $request): Response
     {
         $data = $request->getData("GET");
