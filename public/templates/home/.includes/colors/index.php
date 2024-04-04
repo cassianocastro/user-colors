@@ -1,50 +1,33 @@
 <section>
   <div>
-
     <header>
       <div>
         <h1>All Colors registered.</h1>
+
+        <a href="<?= $this->qs->create("colors", "showForm") ?>">
+          Add a new Color
+        </a>
       </div>
     </header>
 
     <table>
       <caption>
-        Colors Table
+        Colors
       </caption>
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Código Hexadecimal</th>
-          <th>Ação</th>
+          <th>Name</th>
+          <th>Hexadecimal Code</th>
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($colors as $color) : ?>
-          <tr>
-            <td><?= $color->getID() ?></td>
+        <?php foreach ( $colors as $color ) : ?>
+          <tr id="<?= $color->getID() ?>">
             <td><?= $color->getName() ?></td>
             <td><?= $color->getHexCode() ?></td>
-            <td>
-              <a href="<?= $this->qs->create("colors", "showForm", $color->getID()) ?>" class="material-icons md-18">
-                edit
-              </a>
-              <a href="<?= $this->qs->create("colors", "delete", $color->getID()) ?>" class="material-icons md-18">
-                delete
-              </a>
-            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>
     </table>
-
-    <footer>
-      <div>
-        <a href="<?= $this->qs->create("colors", "showForm") ?>">
-          Add a new Color
-        </a>
-      </div>
-    </footer>
-
   </div>
 </section>
