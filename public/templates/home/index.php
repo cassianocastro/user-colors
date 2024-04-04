@@ -29,6 +29,10 @@
           </ul>
         </div>
       </nav>
+
+      <?php require_once __DIR__ . '/.includes/users/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.includes/colors/index.php'; ?>
     </div>
   </main>
 
