@@ -7,34 +7,50 @@ main
     {
         align-items: center;
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         justify-content: center;
+        gap: 0 10%;
+
+        & > :first-child
+        {
+            flex: 100%;
+        }
+
+        & > :nth-child(2)
+        {
+            flex: 40%;
+        }
+
+        & > :last-child
+        {
+            flex: 40%;
+        }
     }
 
     & ul
     {
         display: flex;
         gap: 30px;
-    }
 
-    & a
-    {
-        background: #48374D;
-        border: medium solid #181220;
-        border-radius: 40px;
-
-        color: white;
-
-        letter-spacing: 3px;
-
-        padding: 15px 30px;
-
-        transition: padding .3s linear;
-
-        &:hover
+        & a
         {
-            background: #AB8476;
-            padding: 25px 40px;
+            background: #48374D;
+            border: medium solid #181220;
+            border-radius: 40px;
+
+            color: white;
+
+            letter-spacing: 3px;
+
+            padding: 15px 30px;
+
+            transition: padding .3s linear;
+
+            &:hover
+            {
+                background: #AB8476;
+                padding: 25px 40px;
+            }
         }
     }
 }
