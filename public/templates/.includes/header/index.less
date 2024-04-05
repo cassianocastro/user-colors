@@ -16,45 +16,27 @@ body > header
         height: 100%;
     }
 
-    & nav ul
+    a
     {
-        align-items: center;
-        display: flex;
-        gap: 20px;
-    }
-
-    & a
-    {
-        border-radius: 3px;
+        background: #181220;
+        border-radius: 20px;
 
         color: white;
 
+        font: bold .9rem sans-serif;
         letter-spacing: 2px;
 
-        padding: 7px 13px;
+        outline: medium solid transparent;
+        outline-offset: 0;
+        padding: 10px 15px;
 
-        transition: background-color .7s;
+        transition: all .3s linear;
 
         &:hover
         {
-            background: #181220;
-
-            outline: 2px inset #C0A297;
+            background: transparent;
+            outline-color: #181220;
+            outline-offset: 3px;
         }
-    }
-}
-
-#special
-{
-    background: #181220;
-    border-radius: 20px;
-
-    outline: medium solid transparent;
-    outline-offset: 3px;
-
-    &:hover
-    {
-        background: transparent;
-        outline-color: #181220;
     }
 }
