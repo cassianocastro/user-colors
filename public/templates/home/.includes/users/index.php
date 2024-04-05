@@ -31,19 +31,3 @@
     </table>
   </div>
 </section>
-
-<!--
-<a href="<?php //$this->qs->create("users", "showForm", $user->getID()) ?>" class="material-icons md-18">
-  edit
-</a>
-<a href="<?php //$this->qs->create("users", "delete", $user->getID()) ?>" class="material-icons md-18">
-  delete
-</a>
-
-<a href="<?php //$this->qs->create("colors", "showForm", $color->getID()) ?>" class="material-icons md-18">
-  edit
-</a>
-<a href="<?php //$this->qs->create("colors", "delete", $color->getID()) ?>" class="material-icons md-18">
-  delete
-</a>
--->
