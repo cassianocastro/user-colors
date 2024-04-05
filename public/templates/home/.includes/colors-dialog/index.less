@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-dialog
+#cd
 {
     position: absolute;
     inset: 20px auto auto 20px;
 
-    height: 80vh;
-    width: 30vw;
+    height: 40vh;
+    width: 40vw;
 
     & > :only-child
     {
@@ -15,7 +15,7 @@ dialog
         border-radius: 0 15px 0 15px;
         box-shadow: 0 0 10px 3px #181220;
 
-        padding: 10px 20px;
+        padding: 15px;
 
         height: 100%;
 
@@ -36,7 +36,7 @@ dialog
     }
 }
 
-dialog header
+#cd header
 {
     & > :only-child
     {
@@ -49,7 +49,16 @@ dialog header
 
     h3
     {
-        color: #C0A297;
+        background: #3D314A;
+        border: 2px solid #C0A297;
+        border-radius: 20px;
+
+        color: white;
+
+        font: bold .9rem sans-serif;
+
+        letter-spacing: 2px;
+        padding: 3px 20px;
     }
 
     button
@@ -62,11 +71,11 @@ dialog header
         cursor: pointer;
 
         outline: 2px solid #C0A297;
-        padding: 5px;
+        padding: 3px;
     }
 }
 
-dialog form
+#cd form
 {
     & > :only-child
     {
@@ -76,27 +85,27 @@ dialog form
     fieldset
     {
         display: flex;
-        flex-flow: column nowrap;
-        gap: 15px;
+        flex-flow: row nowrap;
+        gap: 10px;
 
-        padding: 20px 10px 0;
+        padding: 20px;
 
         height: inherit;
+
+        & > label:first-of-type
+        {
+            flex: calc(70% - 5px);
+        }
+
+        & > label:last-of-type
+        {
+            flex: calc(30% - 5px);
+        }
     }
 
     legend
     {
-        background: #3D314A;
-        border: 2px solid #C0A297;
-        border-radius: 20px;
-
-        color: white;
-
-        font: bold .95rem sans-serif;
-
-        letter-spacing: 2px;
-        margin: 0 auto;
-        padding: 7px 20px;
+        display: none;
     }
 
     label
@@ -109,8 +118,6 @@ dialog form
 
         & > :first-child
         {
-            align-self: center;
-
             font: normal .9rem sans-serif;
 
             letter-spacing: 2px;
@@ -135,12 +142,10 @@ dialog form
         font: normal .9rem sans-serif;
 
         padding: 7px 10px;
-
-        text-align: center;
     }
 }
 
-dialog footer
+#cd footer
 {
     & > :only-child
     {
