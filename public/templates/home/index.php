@@ -28,6 +28,8 @@
       <?php require_once __DIR__ . '/.includes/colors/index.php'; ?>
 
       <?php require_once __DIR__ . '/.includes/users-dialog/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.includes/colors-dialog/index.php'; ?>
     </div>
   </main>
 
