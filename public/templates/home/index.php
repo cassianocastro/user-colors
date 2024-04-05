@@ -16,7 +16,7 @@
 
   <title>Test | Home</title>
 </head>
-<body>
+<body id="begin">
   <?php require_once __DIR__ . '/../.includes/noscript/index.inc'; ?>
 
   <?php require_once __DIR__ . '/../.includes/header/index.inc'; ?>
@@ -26,11 +26,14 @@
       <?php require_once __DIR__ . '/.includes/users/index.php'; ?>
 
       <?php require_once __DIR__ . '/.includes/colors/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.includes/form/index.php'; ?>
     </div>
   </main>
 
   <?php require_once __DIR__ . '/../.includes/footer/index.inc'; ?>
 
   <script defer type="module" src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  <script defer type="module" src="public/templates/home/index.js"></script>
 </body>
 </html>
