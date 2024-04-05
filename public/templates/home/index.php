@@ -16,7 +16,7 @@
 
   <title>Test | Home</title>
 </head>
-<body id="begin">
+<body>
   <?php require_once __DIR__ . '/../.includes/noscript/index.inc'; ?>
 
   <?php require_once __DIR__ . '/../.includes/header/index.inc'; ?>
@@ -30,6 +30,8 @@
       <?php require_once __DIR__ . '/.includes/users-dialog/index.php'; ?>
 
       <?php require_once __DIR__ . '/.includes/colors-dialog/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.includes/context/index.php'; ?>
     </div>
   </main>
 
