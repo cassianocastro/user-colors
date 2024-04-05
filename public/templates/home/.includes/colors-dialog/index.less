@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+dialog
+{
+    position: absolute;
+    inset: 20px auto auto 20px;
+
+    height: 80vh;
+    width: 30vw;
+
+    & > :only-child
+    {
+        background-image: linear-gradient(#3D314A, #1A1423, #181220);
+        border: thin solid #C0A297;
+        border-radius: 0 15px 0 15px;
+        box-shadow: 0 0 10px 3px #181220;
+
+        padding: 10px 20px;
+
+        height: 100%;
+
+        & > :first-child
+        {
+            height: 10%;
+        }
+
+        & > :nth-child(2)
+        {
+            height: 80%;
+        }
+
+        & > :last-child
+        {
+            height: 10%;
+        }
+    }
+}
+
+dialog header
+{
+    & > :only-child
+    {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        height: 100%;
+    }
+
+    h3
+    {
+        color: #C0A297;
+    }
+
+    button
+    {
+        background: #3D314A;
+        border: none;
+        border-radius: 50%;
+
+        color: white;
+        cursor: pointer;
+
+        outline: 2px solid #C0A297;
+        padding: 5px;
+    }
+}
+
+dialog form
+{
+    & > :only-child
+    {
+        height: 100%;
+    }
+
+    fieldset
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 15px;
+
+        padding: 20px 10px 0;
+
+        height: inherit;
+    }
+
+    legend
+    {
+        background: #3D314A;
+        border: 2px solid #C0A297;
+        border-radius: 20px;
+
+        color: white;
+
+        font: bold .95rem sans-serif;
+
+        letter-spacing: 2px;
+        margin: 0 auto;
+        padding: 7px 20px;
+    }
+
+    label
+    {
+        color: #C0A297;
+
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+
+        & > :first-child
+        {
+            align-self: center;
+
+            font: normal .9rem sans-serif;
+
+            letter-spacing: 2px;
+        }
+
+        & > :last-child
+        {
+            background: #181220;
+            border: none;
+            border-radius: 5px;
+
+            color: inherit;
+
+            outline: thin outset #C0A297;
+        }
+    }
+
+    input
+    {
+        caret-color: red;
+
+        font: normal .9rem sans-serif;
+
+        padding: 7px 10px;
+
+        text-align: center;
+    }
+}
+
+dialog footer
+{
+    & > :only-child
+    {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+
+        height: 100%;
+    }
+
+    menu
+    {
+        display: flex;
+        gap: 10px;
+
+        button
+        {
+            background: #3D314A;
+            border: thin solid #C0A297;
+            border-radius: 3px;
+
+            color: #C0A297;
+            cursor: pointer;
+
+            font: bold small sans-serif;
+
+            padding: 5px 15px;
+
+            transition: all .7s linear;
+
+            &:hover
+            {
+                background: #181220;
+                color: #C0A297;
+            }
+        }
+    }
+}
