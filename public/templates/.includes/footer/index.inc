@@ -1,6 +1,6 @@
 <footer>
   <div>
-    <a id="author" href="<?= $this->qs->create("cv"); ?>" title="Author">
+    <a id="author" href="#" title="Author">
       Cassiano Castro
     </a>
 
@@ -8,6 +8,8 @@
       Copyright (c) 2022 C.C. Holder All Rights Reserved.
     </p>
 
-    <a class="material-icons" href="#begin">arrow_upward</a>
+    <a class="material-icons" href="#">
+      arrow_upward
+    </a>
   </div>
 </footer>
