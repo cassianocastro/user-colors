@@ -38,7 +38,7 @@ body
 	line-height: 1;
 }
 
-ol, ul
+ol, ul, menu
 {
 	list-style: none;
 }
@@ -68,4 +68,13 @@ html
 *, *:before, *:after
 {
     box-sizing: inherit;
+}
+
+dialog
+{
+    background: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
 }
