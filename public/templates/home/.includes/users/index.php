@@ -2,11 +2,11 @@
   <div>
     <header>
       <div>
-        <h1>All users registered.</h1>
+        <h2>All users registered.</h2>
 
-        <a href="<?= $this->qs->create("users", "showForm") ?>">
-          Add a new User
-        </a>
+        <button type="button" title="Add a new user" class="material-icons md-24">
+          add_circle
+        </button>
       </div>
     </header>
 

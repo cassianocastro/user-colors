@@ -2,11 +2,11 @@
   <div>
     <header>
       <div>
-        <h1>All Colors registered.</h1>
+        <h2>All Colors registered.</h2>
 
-        <a href="<?= $this->qs->create("colors", "showForm") ?>">
-          Add a new Color
-        </a>
+        <button type="button" title="Add a new color" class="material-icons md-24">
+          add_circle
+        </button>
       </div>
     </header>
 
