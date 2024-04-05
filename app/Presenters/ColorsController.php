@@ -5,8 +5,7 @@ namespace App\Presenters;
 
 use App\Model\Entities\Color;
 use App\Model\Tables\ColorsTable;
-use App\Model\Utils\{ HtmlDocument, Request, Response, HTMLFormatter, Palette };
-use App\View\{ ColorsView, ColorsFormView };
+use App\Model\Utils\{ Request, Response };
 
 /**
  *
@@ -22,10 +21,7 @@ final class ColorsController
         {
             $id    = intval($data["id"]);
             $color = (new ColorsTable())->findByID($id);
-            $view  = new ColorsFormView(true, $color);
         }
-        else
-            $view = new ColorsFormView(false);
 
         // Browser::render($view);
     }
