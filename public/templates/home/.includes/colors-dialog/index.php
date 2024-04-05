@@ -1,8 +1,8 @@
-<dialog id="">
+<dialog id="cd">
   <div>
     <header>
       <div>
-        <h3>Form</h3>
+        <h3>New Color</h3>
 
         <button type="button" title="Close" class="material-icons md-18">
           close
