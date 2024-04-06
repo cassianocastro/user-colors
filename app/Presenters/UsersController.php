@@ -13,7 +13,7 @@ use App\Model\Utils\{ Request, Response, Palette };
 final class UsersController
 {
 
-    public function insert(Request $request): Response
+    public function addUser(Request $request): Response
     {
         $data   = $request->getData("POST");
         $name   = $data["name"];
@@ -24,12 +24,10 @@ final class UsersController
 
         foreach ( $colors as $color )
         {
-            $palette->add(
-                (new Color($color["id"], $color["name"], $color["hexCode"]))
-            );
+            $palette->add(new Color($color["name"], $color["hexCode"]));
         }
 
-        $user = new User(0, $name, $email, $palette);
+        $user = new User($name, $email);
 
         (new UsersTable())->insert($user);
         (new UserPaletteTable())->insertColorsFrom($user);
@@ -37,7 +35,7 @@ final class UsersController
         return "User registered.";
     }
 
-    public function update(Request $request): Response
+    public function updateUser(Request $request): Response
     {
         $data    = $request->getData("POST");
         $id      = intval($data["id"]);
@@ -49,28 +47,20 @@ final class UsersController
 
         foreach ( $colors as $color )
         {
-            $palette->add(
-                (new Color($color["id"], $color["name"], $color["hexCode"]))
-            );
+            $palette->add(new Color($color["name"], $color["hexCode"]));
         }
-        $user = new User($id, $name, $email, $palette);
+
+        $user = new User($name, $email);
 
         (new UsersTable())->update($user);
         (new UserPaletteTable())->updateColorsFrom($user);
-
-        if ( $updated )
-        {
-            return "User Updated.";
-        }
-
-        return "User not updated...Sorry";
     }
 
-    public function delete(Request $request): Response
+    public function deleteUser(Request $request): Response
     {
         $data          = $request->getData("GET");
         $id            = intval($data["id"]);
-        $userDeleted   = (new UsersTable())->delete($id);
+        $userDeleted   = (new UsersTable())->delete();
 
         if ( $userDeleted )
         {

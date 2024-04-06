@@ -13,12 +13,13 @@ use App\Model\Utils\{ Request, Response };
 final class ColorsController
 {
 
-    public function insert(Request $request): Response
+    public function addColor(Request $request): Response
     {
         $data     = $request->getData("POST");
         $name     = $data["name"];
         $hexCode  = $data["hexCode"];
-        $inserted = (new ColorsTable())->insert(new Color(0, $name, $hexCode));
+
+        $inserted = (new ColorsTable())->insert(new Color($name, $hexCode));
 
         if ( $inserted )
         {
@@ -28,14 +29,14 @@ final class ColorsController
         return "Color not registered.";
     }
 
-    public function update(Request $request): Response
+    public function updateColor(Request $request): Response
     {
         $data    = $request->getData("POST");
         $id      = intval($data["id"]);
         $name    = $data["name"];
         $hexCode = $data["hexCode"];
 
-        $updated = (new ColorsTable())->update(new Color($id, $name, $hexCode));
+        $updated = (new ColorsTable())->update(new Color($name, $hexCode));
 
         if ( $updated )
         {
@@ -45,12 +46,12 @@ final class ColorsController
         return "Color not updated.";
     }
 
-    public function delete(Request $request): Response
+    public function deleteColor(Request $request): Response
     {
         $data = $request->getData("GET");
         $id   = intval($data["id"]);
 
-        $colorDeleted = (new ColorsTable())->delete($id);
+        $colorDeleted = (new ColorsTable())->delete();
 
         if ( $colorDeleted )
         {
