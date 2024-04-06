@@ -1,5 +1,3 @@
-<?php [ $users, $colors ] = [ [], [] ]; ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
