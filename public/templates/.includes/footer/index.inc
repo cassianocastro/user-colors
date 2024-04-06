@@ -5,7 +5,9 @@
     </a>
 
     <p>
-      Copyright (c) 2022 C.C. Holder All Rights Reserved.
+      <a rel="license" title="Holder" type="text/plain" hreflang="en" href="./LICENSE">
+        Copyright (c) 2022 C.C. Holder All Rights Reserved.
+      </a>
     </p>
 
     <a class="material-icons" href="#">
