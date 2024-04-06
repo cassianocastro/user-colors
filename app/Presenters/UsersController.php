@@ -4,37 +4,14 @@ declare(strict_types=1);
 namespace App\Presenters;
 
 use App\Model\Entities\{ User, Color };
-use App\Model\Tables\{ UsersTable, ColorsTable, UserPaletteTable };
-use App\Model\Utils\{ Request, Response, HTMLFormatter, Palette };
+use App\Model\Tables\{ UsersTable, UserPaletteTable };
+use App\Model\Utils\{ Request, Response, Palette };
 
 /**
  *
  */
 final class UsersController
 {
-
-    public function showForm(Request $request): Response
-    {
-        $data = $request->getData("GET");
-
-        if ( isset($data["id"]) )
-        {
-            $id      = intval($data["id"]);
-            $user    = (new UsersTable())->findByID($id);
-            $cfu     = (new UserPaletteTable())->getColorsFromUser($user);
-            $colors  = (new ColorsTable())->getAll();
-            $options = (new HTMLFormatter())->structOptionsWithSelectedAttr(
-                [$cfu, $colors]
-            );
-        }
-        else
-        {
-            $colors  = (new ColorsTable())->getAll();
-            $options = (new HTMLFormatter())->structOptions($colors);
-        }
-
-        // Browser::render($view);
-    }
 
     public function insert(Request $request): Response
     {

@@ -13,19 +13,6 @@ use App\Model\Utils\{ Request, Response };
 final class ColorsController
 {
 
-    public function showForm(Request $request): Response
-    {
-        $data = $request->getData("GET");
-
-        if ( isset($data["id"]) )
-        {
-            $id    = intval($data["id"]);
-            $color = (new ColorsTable())->findByID($id);
-        }
-
-        // Browser::render($view);
-    }
-
     public function insert(Request $request): Response
     {
         $data     = $request->getData("POST");
