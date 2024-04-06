@@ -15,14 +15,14 @@
         <fieldset>
           <legend>New Color</legend>
 
-          <label title="Somente caracteres de A-Z e/ou a-z">
-            <span>Color Name</span>
+          <label title="Only characters between A-Z and/or a-z">
+            <span>Color's name</span>
 
-            <input type="text" name="name" maxlength="100" pattern="([A-Za-z])+" placeholder="Informe o nome..." autofocus required>
+            <input type="text" name="name" maxlength="100" pattern="([A-Za-z])+" placeholder="Enter the name..." autofocus required>
           </label>
 
           <label title="">
-            <span>Tonalidade</span>
+            <span>Tone</span>
 
             <input type="color" name="hexCode" required>
           </label>

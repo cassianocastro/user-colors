@@ -15,7 +15,7 @@
         <fieldset>
           <legend>New User</legend>
 
-          <label title="Somente caracteres de A-Z e/ou a-z, 0-9 e _">
+          <label title="Only characters between A-Z and/or a-z, 0-9 and _">
             <span>Username</span>
 
             <input type="text" name="name" maxlength="100" placeholder="username_123" pattern="(\w)+" autofocus required>
@@ -27,7 +27,7 @@
             <input type="email" name="email" maxlength="100" placeholder="example@example.com" required>
           </label>
 
-          <label title="Você pode selecionar mais de uma opção segurando Ctrl e clicando com o mouse.">
+          <label title="You can select more than one option pressing CTRL + mouse clicking.">
             <span>Colors</span>
 
             <select name="colors[]" multiple required>
