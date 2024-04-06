@@ -21,8 +21,8 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ( $colors as $color ) : ?>
-          <tr id="<?= $color->getID() ?>">
+        <?php foreach ( $this->params["colors"] as $id => $color ) : ?>
+          <tr id="<?= $id ?>">
             <td><?= $color->getName() ?></td>
             <td><?= $color->getHexCode() ?></td>
           </tr>

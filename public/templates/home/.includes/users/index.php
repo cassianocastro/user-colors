@@ -21,10 +21,14 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ( $users as $user ): ?>
-          <tr id="<?= $user->getID() ?>">
+        <?php foreach ( $this->params["users"] as $id => $user ): ?>
+          <tr id="<?= $id ?>">
             <td><?= $user->getName() ?></td>
-            <td><?= $user->getEmail() ?></td>
+            <td>
+              <a href="mailto:<?= $user->getEmail() ?>">
+                <?= $user->getEmail() ?>
+              </a>
+            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>
