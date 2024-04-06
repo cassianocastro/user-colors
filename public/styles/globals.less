@@ -10,20 +10,31 @@
 .material-icons.md-48 { font-size: 48px; }
 
 /* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-dark { color: rgba(0, 0, 0, .54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, .26); }
 
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, .3); }
 
 /*
     Paleta de Cores:
     https://coolors.co/181220-1a1423-2c2337-3d314a-684756-96705b-ab8476
 */
 
-html
+:root
 {
+    --raisin_black_primary     : #181220;
+    --raisin_black_secondary   : #1a1423;
+    --dark_purple              : #2c2337;
+    --english_violet           : #3d314a;
+    --english_violet_secondary : #48374D;
+    --eggplant                 : #684756;
+    --chamoisee                : #96705b;
+    --beaver                   : #ab8476;
+    --rosy_brown               : #C0A297;
+    --pale_dogwood             : #DCCAC4;
+
     font-family: sans-serif;
 
     scroll-behavior: smooth;
@@ -33,7 +44,7 @@ h1, h2
 {
     font: bold large sans-serif;
 
-    color: #48374D;
+    color: var(--english_violet_secondary);
 }
 
 body
