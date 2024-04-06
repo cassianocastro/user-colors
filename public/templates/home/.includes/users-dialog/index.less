@@ -10,10 +10,10 @@
 
     & > :only-child
     {
-        background-image: linear-gradient(#3D314A, #1A1423, #181220);
-        border: thin solid #C0A297;
+        background-image: linear-gradient(var(--english_violet), var(--raisin_black_secondary), var(--raisin_black_primary));
+        border: thin solid var(--rosy_brown);
         border-radius: 0 15px 0 15px;
-        box-shadow: 0 0 10px 3px #181220;
+        box-shadow: 0 0 10px 3px var(--raisin_black_primary);
 
         padding: 10px 20px;
 
@@ -49,19 +49,19 @@
 
     h3
     {
-        color: #C0A297;
+        color: var(--rosy_brown);
     }
 
     button
     {
-        background: #3D314A;
+        background: var(--english_violet);
         border: none;
         border-radius: 50%;
 
         color: white;
         cursor: pointer;
 
-        outline: 2px solid #C0A297;
+        outline: 2px solid var(--rosy_brown);
         padding: 5px;
     }
 }
@@ -86,8 +86,8 @@
 
     legend
     {
-        background: #3D314A;
-        border: 2px solid #C0A297;
+        background: var(--english_violet);
+        border: 2px solid var(--rosy_brown);
         border-radius: 20px;
 
         color: white;
@@ -101,7 +101,7 @@
 
     label
     {
-        color: #C0A297;
+        color: var(--rosy_brown);
 
         display: flex;
         flex-flow: column nowrap;
@@ -118,13 +118,13 @@
 
         & > :last-child
         {
-            background: #181220;
+            background: var(--raisin_black_primary);
             border: none;
             border-radius: 5px;
 
             color: inherit;
 
-            outline: thin outset #C0A297;
+            outline: thin outset var(--rosy_brown);
         }
     }
 
@@ -158,11 +158,11 @@
 
         button
         {
-            background: #3D314A;
-            border: thin solid #C0A297;
+            background: var(--english_violet);
+            border: thin solid var(--rosy_brown);
             border-radius: 3px;
 
-            color: #C0A297;
+            color: var(--rosy_brown);
             cursor: pointer;
 
             font: bold small sans-serif;
@@ -173,8 +173,7 @@
 
             &:hover
             {
-                background: #181220;
-                color: #C0A297;
+                background: var(--raisin_black_primary);
             }
         }
     }
