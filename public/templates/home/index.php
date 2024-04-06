@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
+<html lang="en-US" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,7 +8,12 @@
   <meta name="description" content="Application for Test.">
   <meta name="keywords" content="Test, PHP, CSS, MVC">
 
-  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/less@4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/css2?family=Allura&display=swap">
+  <link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="preload" as="script" type="text/javascript" href="https://cdn.jsdelivr.net/npm/less@4">
 
   <link rel="stylesheet/less" type="text/css" href="public/templates/home/index.less">
 
