@@ -1,4 +1,4 @@
-<menu id="context">
+<menu id="colors-context">
   <li>
     <button type="button" title="Update" class="material-icons md-24">
       edit
