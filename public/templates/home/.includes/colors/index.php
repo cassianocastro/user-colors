@@ -1,8 +1,8 @@
-<section>
+<section id="colors">
   <div>
     <header>
       <div>
-        <h2>All Colors registered.</h2>
+        <h2>Colors registered</h2>
 
         <button type="button" title="Add a new color" class="material-icons md-24">
           add_circle
@@ -10,24 +10,22 @@
       </div>
     </header>
 
-    <table>
-      <caption>
-        Colors
-      </caption>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Hexadecimal Code</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach ( $this->params["colors"] as $id => $color ) : ?>
-          <tr id="<?= $id ?>">
-            <td><?= $color->getName() ?></td>
-            <td><?= $color->getHexCode() ?></td>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
+    <nav>
+      <div>
+        <ul>
+          <?php foreach ( $this->params["colors"] as $id => $color ) : ?>
+            <li>
+              <div id="<?= $id ?>" class="color">
+                <span style="background: <?= $color->getHexCode() ?>;"></span>
+
+                <span><?= $color->getName() ?></span>
+
+                <span><?= $color->getHexCode() ?></span>
+              </div>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    </nav>
   </div>
 </section>
