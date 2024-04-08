@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#users-context
+{
+    background: var(--eggplant);
+    border: medium outset var(--pale_dogwood);
+    border-radius: 30px;
+    box-shadow: 0 0 5px 2px var(--raisin_black_primary);
+
+    align-items: center;
+    display: none;
+    gap: 3px;
+
+    padding: 5px;
+
+    position: absolute;
+    inset: auto;
+
+    button
+    {
+        background: var(--raisin_black_primary);
+        border: thin solid var(--pale_dogwood);
+        border: none;
+
+        color: var(--pale_dogwood);
+        cursor: pointer;
+
+        outline: none;
+        padding: 10px;
+    }
+
+    [title="Update"]
+    {
+        border-radius: 50% 5px 5px 50%;
+    }
+
+    [title="Details"]
+    {
+        border-radius: 5px;
+    }
+
+    [title="Remove"]
+    {
+        border-radius: 5px 50% 50% 5px;
+    }
+}
