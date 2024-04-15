@@ -9,7 +9,7 @@ namespace App\Model\Utils;
 interface IDocument
 {
 
-    public function getPath(): string;
+    public function getName(): string;
 
-    public function getContent(): string;
+    public function getParams(): array;
 }
