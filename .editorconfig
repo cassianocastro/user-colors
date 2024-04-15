@@ -9,14 +9,8 @@ indent_style             = space
 indent_size = 4
 # tab_width = 4
 
-[*.{yml,html}]
+[*.{yml,html,twig,inc}]
 indent_size = 2
 
 [public/templates/**.php]
-indent_size = 2
-
-[public/templates/includes/**.inc]
-indent_size = 2
-
-[tests/html/**.php]
 indent_size = 2
