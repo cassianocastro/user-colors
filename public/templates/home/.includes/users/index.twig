@@ -11,15 +11,15 @@
     </header>
 
     <menu>
-      <?php foreach ( $this->params["users"] as $id => $user ): ?>
-        <li id="<?= $id ?>">
+      {% for id, user in users %}
+        <li id="{{ id|e }}">
           <button type="button" title="User">
             <span class="material-icons md-48">person</span>
 
-            <span><?= $user->getName() ?></span>
+            <span>{{ user.getName()|e }}</span>
           </button>
         </li>
-      <?php endforeach; ?>
+      {% endfor %}
     </menu>
   </div>
 </section>

@@ -13,17 +13,17 @@
     <nav>
       <div>
         <ul>
-          <?php foreach ( $this->params["colors"] as $id => $color ) : ?>
+          {% for id, color in colors %}
             <li>
-              <div id="<?= $id ?>" class="color">
-                <span style="background: <?= $color->getHexCode() ?>;"></span>
+              <div id="{{ id|e }}" class="color">
+                <span style="background: {{ color.getHexCode()|e }}"></span>
 
-                <span><?= $color->getName() ?></span>
+                <span>{{ color.getName()|e }}</span>
 
-                <span><?= $color->getHexCode() ?></span>
+                <span>{{ color.getHexCode()|e }}</span>
               </div>
             </li>
-          <?php endforeach; ?>
+          {% endfor %}
         </ul>
       </div>
     </nav>
