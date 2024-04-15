@@ -53,10 +53,10 @@ final class ColorsTable
         $statement->execute();
     }
 
-    public function getAll(): iterable
+    public function getAll(): array
     {
         $statement = $this->connection->query(
-            "SELECT id, name, hexCode FROM colors"
+            "SELECT id, name, hexCode AS hexcode FROM colors"
         );
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);

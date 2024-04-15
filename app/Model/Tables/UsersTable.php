@@ -53,7 +53,7 @@ final class UsersTable
         $statement->execute();
     }
 
-    public function getAll(): iterable
+    public function getAll(): array
     {
         $statement = $this->connection->query(
             "SELECT id, name, email FROM users"
