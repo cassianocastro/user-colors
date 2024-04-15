@@ -24,7 +24,7 @@
           <label title="">
             <span>Tone</span>
 
-            <input type="color" name="hexCode" required>
+            <input type="color" name="hexcode" required>
           </label>
         </fieldset>
       </div>
