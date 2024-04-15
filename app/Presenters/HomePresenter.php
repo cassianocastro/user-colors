@@ -49,7 +49,7 @@ final class HomePresenter
                 "Content-Type: text/html"
             ],
             new HtmlDocument(
-                "home/index.php",
+                "home/index.twig",
                 [
                     "users"  => $users,
                     "colors" => $colors
