@@ -11,13 +11,15 @@ use App\Model\Utils\{ HtmlDocument, Response };
 final class CvController
 {
 
-    public function index(): Response
+    public function index(): void
     {
-        return new Response(
-            [
-                "Content-Type: text/html"
-            ],
-            new HtmlDocument("cv/index.php")
-        );
+        header("Content-Type: application/pdf");
+        header("Content-Disposition: attachment; filename: Curriculum.pdf");
+
+        $fp = fopen("php://output", "w");
+
+        fwrite($fp, file_get_contents("./lib/Curriculum.pdf"));
+
+        fclose($fp);
     }
 }
