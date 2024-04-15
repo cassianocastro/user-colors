@@ -11,14 +11,14 @@ final class HtmlDocument implements IDocument
 
     private const PATH = __DIR__ . "/../../../public/templates/";
 
-    private QSCreator $qs;
+    private array $params;
     private string $name;
     private string $content;
 
-    public function __construct(string $name)
+    public function __construct(string $name, array $params)
     {
-        $this->name = $name;
-        $this->qs = new QSCreator();
+        $this->name   = $name;
+        $this->params = $params;
     }
 
     public function getPath(): string
