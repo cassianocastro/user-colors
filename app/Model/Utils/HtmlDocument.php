@@ -9,11 +9,8 @@ namespace App\Model\Utils;
 final class HtmlDocument implements IDocument
 {
 
-    private const PATH = __DIR__ . "/../../../public/templates/";
-
-    private array $params;
     private string $name;
-    private string $content;
+    private array $params;
 
     public function __construct(string $name, array $params)
     {
@@ -21,20 +18,13 @@ final class HtmlDocument implements IDocument
         $this->params = $params;
     }
 
-    public function getPath(): string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getContent(): string
+    public function getParams(): array
     {
-        ob_start();
-
-        require_once self::PATH . $this->name;
-
-        $this->content = ob_get_contents();
-        ob_end_clean();
-
-        return $this->content;
+        return $this->params;
     }
 }
