@@ -3,32 +3,28 @@ declare(strict_types=1);
 
 namespace App\Model\Entities;
 
-use App\Model\Utils\Palette;
-
 /**
  *
  */
-final class User extends Entity
+final class User
 {
 
+    private string $name;
     private string $email;
-    private Palette $palette;
 
-    public function __construct(int $id, string $name, string $email, Palette $palette)
+    public function __construct(string $name, string $email)
     {
-        parent::__construct($id, $name);
+        $this->name  = $name;
+        $this->email = $email;
+    }
 
-        $this->email   = $email;
-        $this->palette = $palette;
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public function getEmail(): string
     {
         return $this->email;
-    }
-
-    public function getPalette(): Palette
-    {
-        return $this->palette;
     }
 }

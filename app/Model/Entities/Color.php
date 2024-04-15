@@ -6,20 +6,25 @@ namespace App\Model\Entities;
 /**
  *
  */
-final class Color extends Entity
+final class Color
 {
 
-    private string $hexCode;
+    private string $name;
+    private string $hexcode;
 
-    public function __construct(int $id, string $name, string $hexCode)
+    public function __construct(string $name, string $hexcode)
     {
-        parent::__construct($id, $name);
+        $this->name    = $name;
+        $this->hexcode = $hexcode;
+    }
 
-        $this->hexCode = $hexCode;
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public function getHexCode(): string
     {
-        return $this->hexCode;
+        return $this->hexcode;
     }
 }
